@@ -1,0 +1,11 @@
+<html>
+    
+    <body>
+        <form action="/questions/edit?id=<%= params[:id] %>" method='post'>
+            <textarea name='questions' placeholder=<%=@question.question%>></textarea>
+            <input type='text' name='answer' placeholder=<%= @question.answer%>>
+            <input type='text' name='flag' placeholder="Flag">
+            <input type="submit" value="Edit">
+        </form>
+    </body>
+</html>
