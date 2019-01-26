@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <% @contacts.each do |c| %>
+            <%= c.first_name %>
+            <%= c.last_name %>
+            <%= c.phone %>
+            <%= c.email %>
+            <%= c.address %>
+            <%= c.city %>
+            <%= c.state %>
+            <%= c.zip %>
+        <% end %>
+        <a href="/contacts">All Contacts</a>
+    </body>
+</html>
