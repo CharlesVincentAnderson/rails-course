@@ -1,0 +1,23 @@
+<form action='/players' method='post'>
+    <div>
+        <input type="text" name="first_name" placeholder="First Name">
+    </div>
+    <div>
+        <input type="text" name="last_name" placeholder="Last Name">
+    </div>
+    <div>
+        <input type="text" name="number" placeholder="Number">
+    </div>
+    <div>
+        <select name="team_id">
+            <option>
+                <% @nhl_teams.each do |nhl_team|%>
+                    <option value="<%= nhl_team.id %>"><%= nhl_team.name %></option>
+                <% end %>
+            </option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="Save">
+    </div>
+</form>

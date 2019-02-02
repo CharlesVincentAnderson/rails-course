@@ -1,0 +1,12 @@
+<form action="/nhl_teams/edit" method="post">
+    <input type="hidden" name="id" value="<%= @nhl_team.id %>">
+    <div>
+        <input type="text" name="name" value="<%= @nhl_team.name %>" placeholder="Team Name">
+    </div>
+    <div>
+        <input type="text" name="city" value="<%= @nhl_team.city %>"placeholder="Team City">
+    </div>
+    <div>
+        <input type="submit" value="Edit">
+    </div>
+</form>

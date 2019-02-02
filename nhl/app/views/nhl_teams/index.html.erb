@@ -1,0 +1,8 @@
+<a href="/nhl_teams/new">New</a>
+<% @nhl_teams.each do |nhl_team| %>
+    <div>
+        <h4><%= nhl_team.name %></h4>
+        <%= nhl_team.city %>
+    </div>
+    <a href='/nhl_teams/edit?id=<%= nhl_team.id %>'>Edit</a>
+<% end %>
