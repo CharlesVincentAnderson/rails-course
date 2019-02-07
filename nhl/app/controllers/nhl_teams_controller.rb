@@ -32,4 +32,8 @@ class NhlTeamsController < ApplicationController
         nhl_team.destroy
         redirect_to '/nhl_teams'
     end
+    
+    def show
+        @nhl_team = NhlTeam.find(params[:id])
+    end
 end

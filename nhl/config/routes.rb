@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/nhl_teams/edit' => 'nhl_teams#edit'
   post '/nhl_teams/edit' => 'nhl_teams#update'
   get '/nhl_teams/delete' => 'nhl_teams#delete'
+  get '/nhl_teams/show' => 'nhl_teams#show'
   
   get '/players/new' => 'players#new'
   post '/players' => 'players#create'

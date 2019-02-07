@@ -9,8 +9,12 @@ class PlayersController < ApplicationController
         player.last_name = params[:last_name]
         player.number = params[:number]
         player.team_id = params[:team_id]
-        player.save
-        redirect_to '/players'
+        if player.save
+            redirect_to '/players'
+        else
+            raise player.errors.full_messages.inspect
+        end 
+        
     end
     
     def index
