@@ -1,0 +1,9 @@
+<h1><%= @franchise.name %></h1>
+
+<h5>Players</h5>
+
+<% @franchise.players.each do |player| %>
+    <div>
+        <%= player.first_name %> <%= player.last_name %>
+    </div>
+<% end %>

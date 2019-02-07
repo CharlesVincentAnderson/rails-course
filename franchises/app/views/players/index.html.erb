@@ -1,0 +1,9 @@
+<a href='/players/new'>New Player</a>
+
+<p></p>
+
+<% @players.each do |player| %>
+    <div>
+        <%= player.first_name %> <%= player.last_name %>
+    </div>
+<% end %>

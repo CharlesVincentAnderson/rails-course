@@ -1,0 +1,22 @@
+<form Action='/players' method='post'>
+    <div>
+        <input type='text' name='first_name' placeholder='First Name'>
+    </div>
+    <div>
+        <input type='text' name='last_name' placeholder='Last Name'>
+    </div>
+     <div>
+        <input type='text' name='number' placeholder='Number'>
+    </div>
+    <div>
+        <select name='franchise_id'>
+            <option>
+                <% @franchises.each do |franchise| %>
+                    <option value="<%= franchise.id %>"><%= franchise.name %></option>
+                <% end %>
+            </option>
+    </div>
+    <div>
+        <input type='submit' value='Save'>
+    </div>
+</form>

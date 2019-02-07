@@ -1,0 +1,12 @@
+<form action="/franchises/edit" method="post">
+    <input type="hidden" name="id" value="<%= @franchise.id %>">
+    <div>
+        <input type="text" name="name" value="<%= @franchise.name %>" placeholder="Team Name">
+    </div>
+    <div>
+        <input type="text" name="city" value="<%= @franchise.city %>" placeholder="Home City">
+    </div>
+    <div>
+        <input type="submit" value="Save">
+    </div>
+</form>

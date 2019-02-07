@@ -1,0 +1,10 @@
+<a href='franchises/new'>New</a>
+<% @franchises.each do |franchise| %>
+    <div>
+        <h4><%= franchise.name %></h4>
+        <%= franchise.city %>
+    </div>
+    <p></p>
+    <a href='/franchises/edit?id=<%= franchise.id %>'>Edit</a>
+    <a href="/franchises/show?id=<%= franchise.id %>">Show</a>
+<% end %>
