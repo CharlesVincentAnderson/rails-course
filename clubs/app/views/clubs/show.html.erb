@@ -1,0 +1,9 @@
+<h1><%= @club.name %></h1>
+
+<h2>Members</h2>
+
+<% @club.students.each do |student| %>
+    <div>
+        <h5><%= student.first_name %> <%= student.last_name %></h5>
+    </div>
+<% end %>

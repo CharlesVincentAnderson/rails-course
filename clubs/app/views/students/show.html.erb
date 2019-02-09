@@ -1,0 +1,15 @@
+<h1><%= @student.first_name %> <%= @student.last_name %></h1>
+
+<%= form_tag '/student/add_club' do %>
+    <%= hidden_field_tag 'student_id', @student.id %>
+    <%= select_tag 'club_id', options_from_collection_for_select(@clubs, :id, :name) %>
+    <%= submit_tag 'Add Club' %>
+<% end %>
+
+<h2>Member Of</h2>
+
+<% @student.clubs.each do |club| %>
+    <div>
+        <h5><%= club.name %></h5>
+    </div>
+<% end %>

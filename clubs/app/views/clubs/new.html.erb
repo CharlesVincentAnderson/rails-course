@@ -1,0 +1,11 @@
+<%= form_for @club do |f| %>
+    <div>
+        <%= f.text_field :name, placeholder: 'Name' %>
+    </div>
+    <div>
+        <%= f.text_area :description, placeholder: 'Description' %>
+    </div>
+    <div>
+        <%= f.submit%>
+    </div>
+<% end %>
