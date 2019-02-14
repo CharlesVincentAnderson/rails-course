@@ -1,0 +1,31 @@
+<% @orders.each do |order| %>
+    <div class="row">
+        <div class="col-2">
+            <%= order.status %>
+        </div>
+        <div class="col-6">
+            <%= order.street_address %>
+            <%= order.city %>
+            <%= order.state %>
+            <%= order.zip %>
+        </div>
+        <div class="col-2">
+            $<%= order.total %>
+        </div>
+        <div class="col-2">
+            <%= link_to 'Prepare', prepare_path(order), 'btn btn-sm btn-secondary' %>
+        </div>
+    </div>
+    <% if order.status == 'preparing' %>
+        <% order.order_dishes.each do |order_dish| %>
+            <div class="media mt-3">
+                <%= image_tag order_dish.dish.picture, height: 60, width: 60, class: 'mr-3' %>
+                <div class="media-body">
+                    <h6>
+                        <%= order_dish.dish.name %>
+                    </h6>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+<% end %>
