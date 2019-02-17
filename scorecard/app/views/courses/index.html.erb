@@ -4,6 +4,6 @@
     <div>
         <%= course.name %>
         <%= link_to 'Edit', edit_course_path(course) %>
-        <%= link_to 'Delete', course_path(course) %>
+        <%= link_to 'Remove', remove_course_path(course), method: :delete %>
     </div>
 <% end %>

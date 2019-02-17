@@ -68,4 +68,10 @@ class CoursesController < ApplicationController
         dish.delete
         redirect_to course_path
     end
+    
+    def remove
+        course = Course.find(params[:id])
+        course.destroy
+        redirect_to '/courses'
+    end
 end
