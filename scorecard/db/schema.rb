@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_15_005451) do
+ActiveRecord::Schema.define(version: 2019_02_19_010546) do
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
@@ -33,6 +33,29 @@ ActiveRecord::Schema.define(version: 2019_02_15_005451) do
     t.integer "hole16_par"
     t.integer "hole17_par"
     t.integer "hole18_par"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "gamecards", force: :cascade do |t|
+    t.integer "score1"
+    t.integer "score2"
+    t.integer "score3"
+    t.integer "score4"
+    t.integer "score5"
+    t.integer "score6"
+    t.integer "score7"
+    t.integer "score8"
+    t.integer "score9"
+    t.integer "score10"
+    t.integer "score11"
+    t.integer "score12"
+    t.integer "score13"
+    t.integer "score14"
+    t.integer "score15"
+    t.integer "score16"
+    t.integer "score17"
+    t.integer "score18"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

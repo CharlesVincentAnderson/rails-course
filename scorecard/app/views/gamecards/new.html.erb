@@ -1,0 +1,39 @@
+New game
+
+<div>
+    Course:
+    <select name='course_id'>
+        <option>
+            <% @courses.each do |course| %>
+                <option value="<%= course.id %>"><%= course.name %></option>
+            <% end %>
+        </option>
+</div>
+
+<div>
+    Players:
+    <select name='user1_id'>
+        <option>
+            <% @users.each do |user| %>
+                <option value="<%= user.id %>"><%= user.first_name %><%= user.last_name %></option>
+            <% end %>
+        </option>
+    <select name='user2_id'>
+        <option>
+            <% @users.each do |user| %>
+                <option value="<%= user.id %>"><%= user.first_name %><%= user.last_name %></option>
+            <% end %>
+        </option>
+    <select name='user3_id'>
+        <option>
+            <% @users.each do |user| %>
+                <option value="<%= user.id %>"><%= user.first_name %><%= user.last_name %></option>
+            <% end %>
+        </option>
+    <select name='user4_id'>
+        <option>
+            <% @users.each do |user| %>
+                <option value="<%= user.id %>"><%= user.first_name %><%= user.last_name %></option>
+            <% end %>
+        </option>
+</div>
